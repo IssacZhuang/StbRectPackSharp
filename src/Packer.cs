@@ -10,7 +10,7 @@ namespace StbRectPackSharp
 #else
 	internal
 #endif
-	class PackerRectangle
+	struct PackerRectangle
 	{
 		public Rectangle Rectangle { get; private set; }
 
@@ -81,7 +81,7 @@ namespace StbRectPackSharp
 		/// <param name="height"></param>
 		/// <param name="userData"></param>
 		/// <returns></returns>
-		public PackerRectangle PackRect(int width, int height, object userData)
+		public PackerRectangle? PackRect(int width, int height, object userData)
 		{
 			var rect = new stbrp_rect
 			{
